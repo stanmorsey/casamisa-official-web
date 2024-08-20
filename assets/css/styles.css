@@ -172,6 +172,87 @@ body.dark-theme {
   background-color: hsl(228, 4%, 35%);
 }
 
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+label {
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Subscribe Button Styles */
+.subscribe-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.subscribe-button:hover {
+  background-color: #0056b3;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -1223,4 +1304,50 @@ body.dark-theme {
   body {
     zoom: 2;
   }
+}
+/* This is the form styling okay */
+.form-new {
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Label Styling */
+.form-new label {
+  display: block; 
+  margin: 10px 0 5px; 
+  font-weight: bold; 
+}
+
+/* Input and Textarea Styling */
+.form-new input[type="tel"],
+.form-new input[type="email"],
+.form-new textarea {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+.form-new .submit-button {
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 10px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  display: inline-block; 
+}
+
+.form-new .submit-button:hover {
+  background-color: #0056b3; 
+}
+
+
+.form-new input,
+.form-new textarea {
+  margin: 0 0 10px; 
 }

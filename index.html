@@ -58,7 +58,29 @@
                 <!-- Theme change button -->
                 <i class='bx bx-moon change-theme' id="theme-button"></i>
 
-                <a href="#" class="nav__button button">Subscribe</a>
+                <!-- Subscription Button -->
+<button class="subscribe-button">Subscribe</button>
+
+<!-- Modal -->
+<div id="subscription-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Subscribe for Updates</h2>
+        <form class="form-new" id="subscription-form">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+
             </nav>
         </header>
 
@@ -470,106 +492,76 @@
             </section>
         </main>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            <div class="footer__container container grid">
-                <div>
-                    <a href="" class="footer__logo">
-                        CasaMisa <i class='bx bxs-home-alt-2'></i>
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <!-- Existing Footer Content -->
+        <div>
+            <a href="" class="footer__logo">
+                CasaMisa <i class='bx bxs-home-alt-2'></i>
+            </a>
+            <p class="footer__description">
+                Our vision is to make all people <br> 
+                the best place to live for them.
+            </p>
+        </div>
+
+        <div class="footer__content">
+            <div>
+                <h3 class="footer__title">About</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link" data-content="about">About Us</a></li>
+                    <li><a href="#" class="footer__link" data-content="features">Features</a></li>
+                    <li><a href="#" class="footer__link" data-content="news">News & Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Company</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link" data-content="how-we-work">How We Work?</a></li>
+                    <li><a href="#" class="footer__link" data-content="capital">Capital</a></li>
+                    <li><a href="#" class="footer__link" data-content="security">Security</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Support</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link" data-content="faqs">FAQs</a></li>
+                    <li><a href="#" class="footer__link" data-content="support-center">Support center</a></li>
+                    <li><a href="#" class="footer__link" data-content="contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Follow us</h3>
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook-circle'></i>
                     </a>
-                    <p class="footer__description">
-                        Our vision is to make all people <br> 
-                        the best place to live for them.
-                    </p>
-                </div>
-
-                <div class="footer__content">
-                    <div>
-                        <h3 class="footer__title">
-                            About
-                        </h3>
-
-                        <ul class="footer__links">
-                            <li>
-                                <a href="#" class="footer__link">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">News & Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="footer__title">
-                            Company
-                        </h3>
-
-                        <ul class="footer__links">
-                            <li>
-                                <a href="#" class="footer__link">How We Work?</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Capital</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Security</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="footer__title">
-                            Support
-                        </h3>
-
-                        <ul class="footer__links">
-                            <li>
-                                <a href="#" class="footer__link">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Support center</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="footer__title">
-                            Follow us
-                        </h3>
-
-                        <ul class="footer__social">
-                            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
-                                <i class='bx bxl-facebook-circle' ></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                                <i class='bx bxl-instagram-alt' ></i>
-                            </a>
-                            <a href="https://www.pinterest.com/" target="_blank" class="footer__social-link">
-                                <i class='bx bxl-pinterest' ></i>
-                            </a>    
-                        </ul>
-                    </div>
-                </div>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://www.pinterest.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-pinterest'></i>
+                    </a>
+                </ul>
             </div>
+        </div>
+    </div>
 
-            <div class="footer__info container">
-                <span class="footer__copy">
-                    &#169;<a href="https://wa.me/254723276844 " target="_blank">Surge Innovations</a>
-. All rigths reserved
-                </span>
+    <div class="footer__info container">
+        <span class="footer__copy">
+            &#169;<a href="https://wa.me/254723276844" target="_blank">Surge Innovations</a>. All rights reserved
+        </span>
 
-                <div class="footer__privacy">
-                    <a href="#">Terms & Agreements</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
-        </footer>
+        <div class="footer__privacy">
+            <a href="#">Terms & Agreements</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
 
 
         <!--========== SCROLL UP ==========-->
@@ -586,4 +578,142 @@
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.footer__link');
+            const mainContent = document.querySelector('.main');
+            
+            const content = {
+                about: `
+                    <section class="about section">
+                        <div class="container">
+                            <h2 class="section__title">About Us</h2>
+                            <p class="section__description">
+                                We are a leading real estate agency dedicated to finding the perfect home for you.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                features: `
+                    <section class="features section">
+                        <div class="container">
+                            <h2 class="section__title">Features</h2>
+                            <p class="section__description">
+                                Our properties come with top-notch features including swimming pools, gyms, and more.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                news: `
+                    <section class="news section">
+                        <div class="container">
+                            <h2 class="section__title">News & Blog</h2>
+                            <p class="section__description">
+                                Stay updated with the latest news and blog posts from our real estate experts.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                'how-we-work': `
+                    <section class="how-we-work section">
+                        <div class="container">
+                            <h2 class="section__title">How We Work</h2>
+                            <p class="section__description">
+                                Discover our streamlined process for helping you find and secure your dream home.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                capital: `
+                    <section class="capital section">
+                        <div class="container">
+                            <h2 class="section__title">Capital</h2>
+                            <p class="section__description">
+                                Information on how we manage capital and investments.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                security: `
+                    <section class="security section">
+                        <div class="container">
+                            <h2 class="section__title">Security</h2>
+                            <p class="section__description">
+                                Learn about our security measures to protect your personal information.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                faqs: `
+                    <section class="faqs section">
+                        <div class="container">
+                            <h2 class="section__title">FAQs</h2>
+                            <p class="section__description">
+                                Frequently asked questions and their answers.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                'support-center': `
+                    <section class="support-center section">
+                        <div class="container">
+                            <h2 class="section__title">Support Center</h2>
+                            <p class="section__description">
+                                Get help and support with our dedicated support center.
+                            </p>
+                        </div>
+                    </section>
+                `,
+                'contact-us': `
+                    <section class="contact-us section">
+                        <div class="container">
+                            <h2 class="section__title">Contact Us</h2>
+                            <p class="section__description">
+                                Get in touch with us for any inquiries or assistance.
+                            </p>
+                        </div>
+                    </section>
+                `
+            };
+            
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const contentKey = e.target.getAttribute('data-content');
+                    if (content[contentKey]) {
+                        mainContent.innerHTML = content[contentKey];
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the modal element and the button that opens it
+            const modal = document.getElementById('subscription-modal');
+            const btn = document.querySelector('.subscribe-button');
+            const closeButton = document.querySelector('.close-button');
+    
+            // Open the modal when the button is clicked
+            btn.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+    
+            // Close the modal when the user clicks on the close button
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+    
+            // CloseS the modal when the user clicks anywhere outside of the modal
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    
 </html>
