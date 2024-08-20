@@ -68,7 +68,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: .3s; 
 }
 
 h1, h2, h3 {
@@ -384,9 +384,12 @@ input, textarea {
 
 /*=============== HOME ===============*/
 .home {
-  background: linear-gradient(170deg, 
-                hsl(0, 0%, 22%) 0%,
-                hsl(0, 0%, 6%) 30%);
+  background-image: url('/assets/img/cover.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #fff; 
+  padding: 60px 0; 
   padding-bottom: 0;
 }
 
@@ -407,7 +410,8 @@ input, textarea {
 }
 
 .home__description {
-  color: var(--text-color-light);
+  color: white;
+  font-weight: 1800;
   margin-bottom: 2rem;
 }
 
@@ -453,7 +457,7 @@ input, textarea {
 
 .home__value-description {
   display: flex;
-  color: var(--text-color-light);
+  color: white;
   font-size: var(--smaller-font-size);
 }
 
