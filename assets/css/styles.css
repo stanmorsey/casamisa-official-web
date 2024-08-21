@@ -1358,3 +1358,135 @@ input, textarea {
 .form-new textarea {
   margin: 0 0 10px; 
 }
+
+
+/* 535335 */
+
+.stellar-zone {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 40px 20px;
+}
+
+.interstellar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nebula-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cosmos-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adds space between elements */
+}
+
+.planet-image {
+  width: 100%;
+  max-width: 600px; /* Limits the width of the image */
+}
+
+.asteroid-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: rounded corners for a softer look */
+}
+
+.comet-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adds space between paragraphs */
+}
+
+.star-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px; /* Ensures text doesn't stretch too wide */
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cosmos-content {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .planet-image,
+  .comet-text {
+      width: 50%; /* Each half of the row */
+      padding: 0 10px;
+  }
+
+  .star-description {
+      text-align: left;
+      margin: 0; /* Remove extra margin */
+  }
+}
+.galactic-zone {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.quantum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nova-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.celestial-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.stellar-features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.feature-item {
+  max-width: 350px;
+  text-align: center;
+}
+
+.galaxy-feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.meteor-feature-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
