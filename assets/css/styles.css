@@ -1483,7 +1483,15 @@ input, textarea {
   height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-in-out;
 }
+
+.feature-image:hover {
+  transform: scale(1.08) rotate(1deg); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+  filter: brightness(1.1) contrast(1.05);
+}
+
 
 .meteor-feature-description {
   font-size: 1rem;
