@@ -908,6 +908,7 @@ input, textarea {
 
 .footer__social-link:hover {
   color: var(--title-color);
+  cursor: pointer;
 }
 
 .footer__info, 
