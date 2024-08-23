@@ -273,6 +273,7 @@ input, textarea {
   margin-bottom: 1rem;
 }
 
+
 .section__title span {
   color: var(--second-color);
 }
@@ -284,7 +285,7 @@ input, textarea {
 }
 
 .main {
-  overflow: hidden; /* For the animations ScrollReveal */
+  overflow: hidden; 
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -295,7 +296,7 @@ input, textarea {
   width: 100%;
   background-color: transparent;
   z-index: var(--z-fixed);
-  transition: .4s; /* For animation dark mode */
+  transition: .4s; 
 }
 
 .nav {
