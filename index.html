@@ -204,88 +204,167 @@
       <!--==================== POPULAR ====================-->
       <section class="section" id="popular">
         <div class="container">
-          <span class="section__subtitle">Best Choise</span>
-          <h2 class="section__title">Popular Residences<span>.</span></h2>
-
-          <div class="popular__container grid swiper">
-            <div class="swiper-wrapper">
-              <article class="popular__card swiper-slide">
-                <img
-                  src="assets/img/popular1.jpg"
-                  alt="Lavingtone CasaMisa"
-                  class="popular__img"
-                />
-
-                <div class="popular__data">
-                  <h2 class="popular__price"><span>KES. </span>66,356</h2>
-                  <h3 class="popular__title">Kilimani Apartments</h3>
-                  <p class="popular__description">
-                    Opposite Yaya Center near dash dash road
-                  </p>
+            <span class="section__subtitle">Best Choice</span>
+            <h2 class="section__title">Popular Residences<span>.</span></h2>
+    
+            <div class="popular__container grid swiper">
+                <div class="swiper-wrapper">
+                    <!-- Modal Trigger for Kilimani Apartments -->
+                    <article class="popular__card swiper-slide" onclick="openModal('kilimani')">
+                        <img src="assets/img/popular1.jpg" alt="Kilimani Apartments" class="popular__img" />
+                        <div class="popular__data">
+                            <h2 class="popular__price"><span>KES. </span>66,356</h2>
+                            <h3 class="popular__title">Kilimani Apartments</h3>
+                            <p class="popular__description">
+                                Opposite Yaya Center near dash dash road
+                            </p>
+                        </div>
+                    </article>
+    
+                    <!-- Modal Trigger for RiverSide Apartments -->
+                    <article class="popular__card swiper-slide" onclick="openModal('riverside')">
+                        <img src="assets/img/popular2.jpg" alt="RiverSide Apartments" class="popular__img" />
+                        <div class="popular__data">
+                            <h2 class="popular__price"><span>KES. </span>35,159</h2>
+                            <h3 class="popular__title">RiverSide Apartments</h3>
+                            <p class="popular__description">
+                                Just in RiverSide around some area updating soon
+                            </p>
+                        </div>
+                    </article>
+    
+                    <!-- Modal Trigger for Lavington Apartments -->
+                    <article class="popular__card swiper-slide" onclick="openModal('lavington')">
+                        <img src="assets/img/popular3.jpg" alt="Lavington Apartments" class="popular__img" />
+                        <div class="popular__data">
+                            <h2 class="popular__price"><span>KES. </span>75,043</h2>
+                            <h3 class="popular__title">Lavington Apartments</h3>
+                            <p class="popular__description">
+                                Just in this area and Morsell will help give the directions okay client!
+                            </p>
+                        </div>
+                    </article>
+    
+                    <!-- Modal Trigger for Kileleshwa Apartments -->
+                    <article class="popular__card swiper-slide" onclick="openModal('kileleshwa')">
+                        <img src="assets/img/popular4.jpg" alt="Kileleshwa Apartments" class="popular__img" />
+                        <div class="popular__data">
+                            <h2 class="popular__price"><span>KES. </span>62,024</h2>
+                            <h3 class="popular__title">Kileleshwa Apartments</h3>
+                            <p class="popular__description">
+                                Just in this area and Morsell will help give the directions okay client!
+                            </p>
+                        </div>
+                    </article>
                 </div>
-              </article>
-
-              <article class="popular__card swiper-slide">
-                <img
-                  src="assets/img/popular2.jpg"
-                  alt="Kileleshwa Casamisa"
-                  class="popular__img"
-                />
-
-                <div class="popular__data">
-                  <h2 class="popular__price"><span>KES. </span>35,159</h2>
-                  <h3 class="popular__title">RiverSide Apartments</h3>
-                  <p class="popular__description">
-                    Just in RiverSide around some area updating soon
-                  </p>
+    
+                <div class="swiper-button-next">
+                    <i class="bx bx-chevron-right"></i>
                 </div>
-              </article>
-
-              <article class="popular__card swiper-slide">
-                <img
-                  src="assets/img/popular3.jpg"
-                  alt="Lavingtone CasaMisa"
-                  class="popular__img"
-                />
-
-                <div class="popular__data">
-                  <h2 class="popular__price"><span>KES. </span>75,043</h2>
-                  <h3 class="popular__title">Lavington Apartments</h3>
-                  <p class="popular__description">
-                    Just in this area and Morsell will help give the directions
-                    okay client!
-                  </p>
+                <div class="swiper-button-prev">
+                    <i class="bx bx-chevron-left"></i>
                 </div>
-              </article>
-
-              <article class="popular__card swiper-slide">
-                <img
-                  src="assets/img/popular4.jpg"
-                  alt="Lavingtone Apartments"
-                  class="popular__img"
-                />
-
-                <div class="popular__data">
-                  <h2 class="popular__price"><span>KES. </span>62,024</h2>
-                  <h3 class="popular__title">Kileleshwa Apartments</h3>
-                  <p class="popular__description">
-                    Just in this area and Morsell will help give the directions
-                    okay client!
-                  </p>
-                </div>
-              </article>
-
             </div>
-
-            <div class="swiper-button-next">
-              <i class="bx bx-chevron-right"></i>
-            </div>
-            <div class="swiper-button-prev">
-              <i class="bx bx-chevron-left"></i>
-            </div>
-          </div>
         </div>
-      </section>
+    
+        <!-- Modals -->
+        <!-- Kilimani Modal -->
+        <div id="kilimani-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('kilimani')">&times;</span>
+                <h2>Kilimani Apartments</h2>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="showDetails('kilimani', 1)">Apartment 1: KES. 70,000 - 2 BHK, Near Yaya Center <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('kilimani', 2)">Apartment 2: KES. 65,000 - 1 BHK, Opposite Yaya Center <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('kilimani', 3)">Apartment 3: KES. 72,000 - 3 BHK, Near dash dash road <span>>></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kilimani-details" class="modal-details">
+                    <!-- Details will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- RiverSide Modal -->
+        <div id="riverside-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('riverside')">&times;</span>
+                <h2>RiverSide Apartments</h2>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="showDetails('riverside', 1)">Apartment 1: KES. 32,000 - 1 BHK, Near RiverSide Mall <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('riverside', 2)">Apartment 2: KES. 34,000 - 2 BHK, Riverside Area <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('riverside', 3)">Apartment 3: KES. 36,000 - 2 BHK, Near some area updating soon <span>>></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="riverside-details" class="modal-details">
+                    <!-- Details will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- Lavington Modal -->
+        <div id="lavington-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('lavington')">&times;</span>
+                <h2>Lavington Apartments</h2>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="showDetails('lavington', 1)">Apartment 1: KES. 75,000 - 2 BHK, Lavington Area <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('lavington', 2)">Apartment 2: KES. 77,000 - 3 BHK, Near Morsell <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('lavington', 3)">Apartment 3: KES. 80,000 - 3 BHK, Lavington and Morsell directions <span>>></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="lavington-details" class="modal-details">
+                    <!-- Details will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- Kileleshwa Modal -->
+        <div id="kileleshwa-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('kileleshwa')">&times;</span>
+                <h2>Kileleshwa Apartments</h2>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="showDetails('kileleshwa', 1)">Apartment 1: KES. 60,000 - 2 BHK, Kileleshwa Area <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('kileleshwa', 2)">Apartment 2: KES. 62,000 - 2 BHK, Near Morsell <span>>></span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDetails('kileleshwa', 3)">Apartment 3: KES. 65,000 - 3 BHK, Kileleshwa and Morsell directions <span>>></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kileleshwa-details" class="modal-details">
+                    <!-- Details will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
       <!--==================== VALUE ====================-->
       <section class="value section" id="value">
@@ -1023,6 +1102,97 @@
       });
     </script>
     <script>
+      const apartments = {
+          kilimani: {
+              1: { type: "2 BHK", size: "1200 sq ft", features: "Pool, Gym, Parking", price: "KES. 70,000", images: ["assets/img/popular5.jpg", "assets/img/popular4.jpg"] },
+              2: { type: "1 BHK", size: "800 sq ft", features: "Gym, Parking", price: "KES. 65,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              3: { type: "3 BHK", size: "1500 sq ft", features: "Pool, Gym, Parking", price: "KES. 72,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] }
+          },
+          riverside: {
+              1: { type: "1 BHK", size: "900 sq ft", features: "Gym, Parking", price: "KES. 32,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              2: { type: "2 BHK", size: "1100 sq ft", features: "Pool, Parking", price: "KES. 34,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              3: { type: "2 BHK", size: "1000 sq ft", features: "Gym, Parking", price: "KES. 36,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] }
+          },
+          lavington: {
+              1: { type: "2 BHK", size: "1300 sq ft", features: "Pool, Gym, Parking", price: "KES. 75,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              2: { type: "3 BHK", size: "1500 sq ft", features: "Gym, Parking", price: "KES. 77,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              3: { type: "3 BHK", size: "1600 sq ft", features: "Pool, Gym, Parking", price: "KES. 80,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] }
+          },
+          kileleshwa: {
+              1: { type: "2 BHK", size: "1100 sq ft", features: "Gym, Parking", price: "KES. 60,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              2: { type: "2 BHK", size: "1200 sq ft", features: "Pool, Parking", price: "KES. 62,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] },
+              3: { type: "3 BHK", size: "1400 sq ft", features: "Gym, Parking", price: "KES. 65,000", images: ["assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg","assets/img/popular5.jpg"] }
+          }
+      };
+  
+      let currentImageIndex = 0;
+      function showDetails(area, apartmentId) {
+    const details = apartments[area] && apartments[area][apartmentId];
+    const detailsContainer = document.getElementById(area + '-details');
+
+    if (details) {
+        currentImageIndex = 0; // Reset the index when new details are shown
+
+        const updateImage = () => {
+            const imgSrc = details.images[currentImageIndex];
+            detailsContainer.innerHTML = `
+                <h3>Details for Apartment ${apartmentId}</h3>
+                <p><strong>Type:</strong> ${details.type || 'N/A'}</p>
+                <p><strong>Size:</strong> ${details.size || 'N/A'}</p>
+                <p><strong>Features:</strong> ${details.features || 'N/A'}</p>
+                <p><strong>Price:</strong> ${details.price || 'N/A'}</p>
+              <div class="details-images">
+              <img src="${imgSrc}" alt="Apartment Image" class="modal-detail-img" />
+              <div class="swiper--button-prev" onclick="previousImage()">
+                <i class="bx bx-chevron-left"></i>
+              </div>
+              <div class="swiper--button-next" onclick="nextImage()">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+
+
+            `;
+            detailsContainer.style.display = 'block';
+        };
+
+        window.previousImage = () => {
+            currentImageIndex = (currentImageIndex - 1 + details.images.length) % details.images.length;
+            updateImage();
+        };
+
+        window.nextImage = () => {
+            currentImageIndex = (currentImageIndex + 1) % details.images.length;
+            updateImage();
+        };
+
+        updateImage(); // Show the first image
+    } else {
+        detailsContainer.innerHTML = '<p>Details not found for this apartment.</p>';
+        detailsContainer.style.display = 'block';
+    }
+}
+
+  
+      function closeModal(area) {
+          document.getElementById(area + '-modal').style.display = 'none';
+          document.getElementById(area + '-details').style.display = 'none';
+      }
+  
+      function openModal(area) {
+          document.getElementById(area + '-modal').style.display = 'block';
+      }
+  
+      // Close the modals when clicking outside of them
+      window.onclick = function(event) {
+          if (event.target.classList.contains('modal')) {
+              event.target.style.display = 'none';
+          }
+      };
+  </script>
+  
+    <script>
+      
       document.addEventListener("DOMContentLoaded", () => {
         // Get the modal element and the button that opens it
         const modal = document.getElementById("subscription-modal");
