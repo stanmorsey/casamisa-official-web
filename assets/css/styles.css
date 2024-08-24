@@ -224,8 +224,8 @@ body.dark-theme {
 
 /*=============== SWIPER ===============*/
 .swiper-container {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
 }
 
 .swiper-wrapper {
@@ -242,8 +242,8 @@ body.dark-theme {
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 70;
   object-fit: cover;
 }
 
@@ -1684,9 +1684,9 @@ input, textarea {
 .modal .close {
   position: absolute;
   top: 30px;
-  right: 25px;
-  font-size: 30px;
-  color: white;
+  right: 20px;
+  font-size: 50px;
+  color: rgb(244, 3, 3);
   cursor: pointer;
 }
 
