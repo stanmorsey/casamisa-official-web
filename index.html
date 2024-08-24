@@ -285,24 +285,29 @@
         </div>
       </section>
 
-      <!-- Booking Modal -->
-<div id="bookingModal" class="booking-modal" style="display: none;">
-  <h2>Booking Title</h2>
-  <p>Booking description and details.</p>
-  <div class="close-booking" onclick="closeBookingModal()">Close</div>
+<!-- Fullscreen Modal Gallery -->
+<div id="galleryModal" class="modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="modal-content swiper-container">
+    <div class="swiper-wrapper" id="galleryImages"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="booking-info">
+    <h2 id="bookingTitle"></h2>
+    <p id="bookingDescription"></p>
+    <button class="book-button" onclick="openBookingModal('Kilimani')">Book Now</button>
+  </div>
 </div>
 
-      
-      <!-- Image Gallery Modal -->
-      <div id="galleryModal" class="modal" style="display: none;">
-        <span class="close" onclick="closeGallery()">&times;</span>
-        <div class="modal-content swiper-container">
-          <div class="swiper-wrapper" id="galleryImages"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+  <span class="close" onclick="closeBookingModal()">&times;</span>
+  <h2 id="bookingTitle">Booking Information</h2>
+  <p id="bookingDescription">Details about the booking...</p>
+</div>
+
       
 
       <!--==================== VALUE ====================-->

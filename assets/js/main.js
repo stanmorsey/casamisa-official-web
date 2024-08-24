@@ -133,225 +133,123 @@ sr.reveal(`.logos__img`, {interval: 100})
 sr.reveal(`.value__images, .contact__content`, {origin: 'left'})
 sr.reveal(`.value__content, .contact__images`, {origin: 'right'})
 
-/*=============== IMAGE GALLERY MODAL ===============*/
+// Open Image Gallery Modal
+let currentLocation = ''; // Store the current location globally
+
 function openGallery(location) {
-    const galleryModal = document.getElementById('galleryModal');
-    const galleryImages = document.getElementById('galleryImages');
-  
-    // Clear existing images
-    galleryImages.innerHTML = '';
-  
-    // Add images based on the location
-    const images = getImagesForLocation(location);
-    images.forEach(image => {
+  currentLocation = location; // Set the current location
+  const galleryModal = document.getElementById('galleryModal');
+  const galleryImages = document.getElementById('galleryImages');
+
+  // Clear existing images
+  galleryImages.innerHTML = '';
+
+  // Add images based on the location
+  const images = getImagesForLocation(location);
+  images.forEach(image => {
       const swiperSlide = document.createElement('div');
       swiperSlide.classList.add('swiper-slide');
+
       const img = document.createElement('img');
       img.src = image;
+      img.style.width = '100%';
+      img.style.height = 'auto';
+
       swiperSlide.appendChild(img);
       galleryImages.appendChild(swiperSlide);
-    });
-  
-    // Initialize Swiper
-    new Swiper('.swiper-container', {
+  });
+
+  // Initialize Swiper
+  new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 0,
+      loop: false,
       pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+          el: '.swiper-pagination',
+          clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
       },
-    });
-  
-    // Display the modal
-    galleryModal.style.display = 'block';
+  });
+
+  // Display the modal
+  galleryModal.style.display = 'block';
 }
 
 function closeGallery() {
-    document.getElementById('galleryModal').style.display = 'none';
+  document.getElementById('galleryModal').style.display = 'none';
 }
 
 function getImagesForLocation(location) {
-    const images = {
-      'Kilimani': ['assets/img/kilimani1.jpg', 'assets/img/kilimani2.jpg'],
-      'RiverSide': ['assets/img/riverside1.jpg', 'assets/img/riverside2.jpg'],
-      'Lavington': ['assets/img/lavington1.jpg', 'assets/img/lavington2.jpg'],
-      'Kileleshwa': ['assets/img/kileleshwa1.jpg', 'assets/img/kileleshwa2.jpg'],
-    };
-    return images[location] || [];
+  const images = {
+      'Kilimani': [
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+      ],
+      'RiverSide': [
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+      ],
+      'Lavington': [
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+      ],
+      'Kileleshwa': [
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+        'assets/img/kitchen.jpg',
+      ],
+  };
+  return images[location] || [];
 }
 
-function openGallery(location) {
-    const galleryModal = document.getElementById('galleryModal');
-    const galleryImages = document.getElementById('galleryImages');
-  
-    // Clear existing images
-    galleryImages.innerHTML = '';
-  
-    // Add images based on the location
-    const images = getImagesForLocation(location);
-    images.forEach(image => {
-      const swiperSlide = document.createElement('div');
-      swiperSlide.classList.add('swiper-slide');
-      const img = document.createElement('img');
-      img.src = image;
-      swiperSlide.appendChild(img);
-      galleryImages.appendChild(swiperSlide);
-    });
-  
-    // Initialize Swiper
-    new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  
-    // Display the modal
-    galleryModal.style.display = 'block';
-  }
-  
-  function closeGallery() {
-    document.getElementById('galleryModal').style.display = 'none';
-  }
-  
-  function getImagesForLocation(location) {
-    let images = [];
-  
-    // Determine which images to load based on location
-    if (location === 'Kilimani') {
-        images = [
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-          ];
-    } else if (location === 'RiverSide') {
-        images = [
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-          ];
-    } else if (location === 'Lavington') {
-      images = [
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-        'assets/img/kitchen.jpg',
-      ];
-    } else if (location === 'Kileleshwa') {
-        images = [
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-            'assets/img/kitchen.jpg',
-          ];
-    }
-  
-    return images;
-  }
-  
+function openBookingModal() {
+  const bookingModal = document.getElementById('bookingModal');
+  const bookingTitle = document.getElementById('bookingTitle');
+  const bookingDescription = document.getElementById('bookingDescription');
+  const bookingInfo = getBookingInfo(currentLocation); // Use the current location
 
-  function openGallery(location) {
-    const galleryModal = document.getElementById('galleryModal');
-    const galleryImages = document.getElementById('galleryImages');
-  
-    galleryImages.innerHTML = '';
-  
-    const images = getImagesForLocation(location);
-    images.forEach(image => {
-      const swiperSlide = document.createElement('div');
-      swiperSlide.classList.add('swiper-slide');
-  
-      const img = document.createElement('img');
-      img.src = image;
-  
-      const bookButton = document.createElement('div');
-      bookButton.classList.add('book-button');
-      bookButton.innerText = 'Book Now';
-      bookButton.onclick = () => openBookingModal(location);
-  
-      swiperSlide.appendChild(img);
-      swiperSlide.appendChild(bookButton);
-      galleryImages.appendChild(swiperSlide);
-    });
-  
-    new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      loop: false,
-    });
-  
-    galleryModal.style.display = 'block';
-  }
-  
-  function openBookingModal(location) {
-    const bookingModal = document.getElementById('bookingModal');
-    const bookingTitle = document.getElementById('bookingTitle');
-    const bookingDescription = document.getElementById('bookingDescription');
-    const bookingInfo = getBookingInfo(location);
-  
-    bookingTitle.innerText = bookingInfo.title;
-    bookingDescription.innerText = bookingInfo.description;
-    bookingModal.style.display = 'block';
-  }
-  
-  function closeBookingModal() {
-    document.getElementById('bookingModal').style.display = 'none';
-  }
-  
-  function getBookingInfo(location) {
-    const info = {
+  bookingTitle.innerText = bookingInfo.title;
+  bookingDescription.innerText = bookingInfo.description;
+  bookingModal.style.display = 'block';
+}
+
+function closeBookingModal() {
+  document.getElementById('bookingModal').style.display = 'none';
+}
+
+function getBookingInfo(location) {
+  const info = {
       'Kilimani': {
-        title: 'Kilimani Apartments Booking',
-        description: 'Located near Yaya Center, offering a luxurious stay with amenities like a gym, swimming pool, and more.',
+          title: 'Kilimani Apartments Booking',
+          description: 'Located near Yaya Center, offering a luxurious stay with amenities like a gym, swimming pool, and more.',
       },
       'RiverSide': {
-        title: 'RiverSide Apartments Booking',
-        description: 'Modern apartments in a serene environment with river views, gym access, and secure parking.',
+          title: 'RiverSide Apartments Booking',
+          description: 'Modern apartments in a serene environment with river views, gym access, and secure parking.',
       },
       'Lavington': {
-        title: 'Lavington Apartments Booking',
-        description: 'Elegant apartments offering a mix of comfort and style with top-tier amenities.',
+          title: 'Lavington Apartments Booking',
+          description: 'Elegant apartments offering a mix of comfort and style with top-tier amenities.',
       },
       'Kileleshwa': {
-        title: 'Kileleshwa Apartments Booking',
-        description: 'Spacious apartments in a prime location with amenities like a swimming pool and gym.',
+          title: 'Kileleshwa Apartments Booking',
+          description: 'Spacious apartments in a prime location with amenities like a swimming pool and gym.',
       },
-    };
-  
-    return info[location] || { title: 'Booking', description: 'Please contact us for more information.' };
-  }
-  
+  };
+  return info[location] || { title: 'Booking', description: 'Please contact us for more information.' };
+}
