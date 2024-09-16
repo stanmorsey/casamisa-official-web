@@ -158,6 +158,26 @@ function closeGallery() {
 
 function getImagesForLocation(location) {
   const images = {
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina3.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina4.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina7.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina10.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina3.jpg'],
+    
+    'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
+    'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
+    'Kileleshwa': ['assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina13.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
+    'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
+    'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
+    'Kileleshwa': ['assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina13.jpg'],
     'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
     'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
     'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
