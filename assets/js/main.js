@@ -137,8 +137,8 @@ function openGallery(location) {
       centeredSlides: true,
       loop: true,  // Ensure the slider loops
       navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next-gallery",
+          prevEl: ".swiper-button-prev-gallery",
       },
       pagination: {
           el: '.swiper-pagination',
