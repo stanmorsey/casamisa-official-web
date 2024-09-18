@@ -248,7 +248,7 @@
           <h2 class="section__title">Popular Residences<span>.</span></h2>
           <div class="popular__container grid swiper">
             <div class="swiper-wrapper">
-              <article class="popular__card swiper-slide" onclick="openGallery('Kilimani')">
+               <article class="popular__card swiper-slide" >  <!--onclick="openGallery('Kilimani')" -->
                 <img src="assets/img/popular1.jpg" alt="Kilimani Apartments" class="popular__img" />
                 <div class="popular__data">
                   <h2 class="popular__price"><span>KES. </span>5,000 /night</h2>
@@ -256,7 +256,7 @@
                   <p class="popular__description">Opposite Yaya Center near dash dash road</p>
                 </div>
               </article>
-              <article class="popular__card swiper-slide" onclick="openGallery('RiverSide')">
+              <article class="popular__card swiper-slide" > <!--onclick="openGallery('RiverSide')"-->
                 <img src="assets/img/popular2.jpg" alt="RiverSide Apartments" class="popular__img" />
                 <div class="popular__data">
                   <h2 class="popular__price"><span>KES. </span>5,000 /night</h2>
@@ -264,7 +264,7 @@
                   <p class="popular__description">Just in RiverSide around some area updating soon</p>
                 </div>
               </article>
-              <article class="popular__card swiper-slide" onclick="openGallery('Lavington')">
+              <article class="popular__card swiper-slide" >  <!--onclick="openGallery('Lavington')"-->
                 <img src="assets/img/popular3.jpg" alt="Lavington Apartments" class="popular__img" />
                 <div class="popular__data">
                   <h2 class="popular__price"><span>KES. </span>5,000 /night/h3>
@@ -272,7 +272,7 @@
                   <p class="popular__description">Just in this area and Morsell will help give the directions okay client!</p>
                 </div>
               </article>
-              <article class="popular__card swiper-slide" onclick="openGallery('Kileleshwa')">
+              <article class="popular__card swiper-slide" >  <!--onclick="openGallery('Kileleshwa')"-->
                 <img src="assets/img/popular4.jpg" alt="Kileleshwa Apartments" class="popular__img" />
                 <div class="popular__data">
                   <h2 class="popular__price"><span>KES. </span>5,000 /night</h2>
@@ -286,6 +286,64 @@
           </div>
         </div>
       </section>
+      
+<!-- AVAILABLE RESIDENCIES -->
+<section id="available-residencies" class="residencies-list">
+  <h2>Available Residencies</h2>
+  <div class="residency-card" onclick="showResidencyDetails(1)">
+    <img src="assets/img/houses/Alina7.jpg" alt="3 Bedroom House" />
+    <h3>3 Bedroom House</h3>
+    <p>Starting from 13,000 KES</p>
+  </div>
+  <div class="residency-card" onclick="showResidencyDetails(2)">
+    <img src="assets/img/houses/Alina9.jpg" alt="4 Bedroom House" />
+    <h3>4 Bedroom House</h3>
+    <p>Starting from 14,000 KES</p>
+  </div>
+  <div class="residency-card" onclick="showResidencyDetails(3)">
+    <img src="assets/img/houses/Alina12.jpg" alt="1 Bedroom House" />
+    <h3>1 Bedroom House</h3>
+    <p>Starting from 5,500 KES</p>
+  </div>
+  <div class="residency-card" onclick="showResidencyDetails(4)">
+    <img src="assets/img/houses/Alina1.jpg" alt="Studios" />
+    <h3>Studios</h3>
+    <p>Starting from 5,000 KES</p>
+  </div>
+</section>
+
+<!-- Modal for showing house details -->
+<div id="residencyModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeResidencyModal()">&times;</span>
+    
+        <!-- Gallery Section -->
+        <div class="gallery-container">
+          <div class="main-image-container">
+            <button class="gallery-prev" onclick="prevImage()">&#10094;</button>
+            <img id="main-image" src="assets/img/alina1.jpg" alt="Main Residency Image">
+            <button class="gallery-next" onclick="nextImage()">&#10095;</button>
+          </div>
+    
+          <!-- Thumbnail images for the selected residency -->
+          <div class="thumbnail-container">
+            <img src="assets/img/houses/Alina1.jpg" alt="Thumbnail 1" onclick="changeImage('assets/img/houses/Alina1.jpg')">
+            <img src="assets/img/houses/Alina2.jpg" alt="Thumbnail 2" onclick="changeImage('assets/img/houses/Alina2.jpg')">
+            <img src="assets/img/houses/Alina3.jpg" alt="Thumbnail 3" onclick="changeImage('assets/img/houses/Alina3.jpg')">
+            <img src="assets/img/houses/Alina4.jpg" alt="Thumbnail 4" onclick="changeImage('assets/img/houses/Alina4.jpg')">
+            <img src="assets/img/houses/Alina5.jpg" alt="Thumbnail 5" onclick="changeImage('assets/img/houses/Alina5.jpg')">
+          </div>
+        </div>
+
+
+    <h2 id="modalTitle">Residency Title</h2>
+    <p id="modalDescription">Residency Description</p>
+    <button class="book-button">Enquire via WhatsApp</button>
+    <button class="book-button">Call Now</button>
+  </div>
+</div>
+
+      
 
 <!-- Fullscreen Modal Gallery -->
 <div id="galleryModal" class="modal">
@@ -1090,5 +1148,6 @@
         });
       });
     </script>
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>\\
   </body>
 </html>

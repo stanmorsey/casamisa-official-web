@@ -1762,3 +1762,201 @@ input, textarea {
   cursor: pointer;
   border-radius: 5px;
 }
+
+
+
+
+
+/* Featured Residencies Section */
+.featured-residencies {
+  padding: 20px;
+  text-align: center;
+}
+
+.residency-card-featured {
+  display: inline-block;
+  width: 220px;
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.residency-card-featured:hover {
+  transform: scale(1.05);
+}
+
+.residency-card-featured img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.see-all-residencies-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.see-all-residencies-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal for Featured Residencies */
+.modal-featured {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content-featured {
+  background-color: #f9f9f9;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-left-featured img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.modal-right-featured {
+  padding-left: 20px;
+}
+
+.close-featured {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content-featured {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .modal-right-featured {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+
+.residencies-list {
+  padding: 20px;
+  text-align: center;
+}
+
+.residency-card {
+  display: inline-block;
+  width: 250px;
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.residency-card:hover {
+  transform: scale(1.05);
+}
+
+.residency-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
+
+
+/* Gallery container */
+.gallery-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.main-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery-prev, .gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.gallery-prev {
+  left: 10px;
+}
+
+.gallery-next {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail-container img {
+  width: 100px;
+  height: auto;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail-container img:hover {
+  transform: scale(1.1);
+}

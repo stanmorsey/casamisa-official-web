@@ -158,27 +158,7 @@ function closeGallery() {
 
 function getImagesForLocation(location) {
   const images = {
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina3.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina4.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina7.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina10.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina3.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina3.jpg'],
-    
-    'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
-    'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
-    'Kileleshwa': ['assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina13.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
-    'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
-    'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
-    'Kileleshwa': ['assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina13.jpg'],
-    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina2.jpg', 'assets/img/houses/Alina3.jpg'],
+    'Kilimani': ['assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina1.jpg', 'assets/img/houses/Alina3.jpg'],   
     'RiverSide': ['assets/img/houses/Alina5.jpg', 'assets/img/houses/Alina6.jpg', 'assets/img/houses/Alina7.jpg'],
     'Lavington': ['assets/img/houses/Alina8.jpg', 'assets/img/houses/Alina9.jpg', 'assets/img/houses/Alina10.jpg'],
     'Kileleshwa': ['assets/img/houses/Alina11.jpg', 'assets/img/houses/Alina12.jpg', 'assets/img/houses/Alina13.jpg'],
@@ -224,3 +204,266 @@ function getBookingInfo(location) {
   };
   return info[location] || { title: 'Booking', description: 'Please contact us for more information.' };
 }
+
+// Data for featured residencies
+const featuredResidencies = {
+  'three-bedroom': {
+    title: '3 Bedroom House',
+    description: 'A spacious 3-bedroom house with a beautiful garden and modern amenities.',
+    image: 'assets/img/houses/Alina10.jpg'
+  },
+  'four-bedroom': {
+    title: '4 Bedroom House',
+    description: 'A luxurious 4-bedroom house with modern design, large living area, and private parking.',
+    image: 'assets/img/houses/Alina10.jpg'
+  },
+  'one-bedroom': {
+    title: '1 Bedroom House',
+    description: 'A luxurious 1-bedroom house with modern design, large living area, and private parking.',
+    image: 'assets/img/houses/Alina10.jpg'
+  },
+  // Add more properties as needed
+};
+
+// Function to open the modal with the appropriate residency details
+function openFeaturedModal(type) {
+  const modal = document.getElementById('featuredResidencyModal');
+  const modalImage = document.getElementById('modalImageFeatured');
+  const modalTitle = document.getElementById('modalTitleFeatured');
+  const modalDescription = document.getElementById('modalDescriptionFeatured');
+
+  modalImage.src = featuredResidencies[type].image;
+  modalTitle.textContent = featuredResidencies[type].title;
+  modalDescription.textContent = featuredResidencies[type].description;
+
+  modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModalFeatured() {
+  document.getElementById('featuredResidencyModal').style.display = 'none';
+}
+
+// Function to show all residencies (can be a link or another modal)
+function openAllResidencies() {
+  alert('Display all residencies here or link to a new page.');
+}
+
+function changeImage(imageSrc) {
+  document.getElementById('main-image').src = imageSrc;
+}
+
+function showResidencyDetails(id) {
+  let modal = document.getElementById('residencyModal');
+  let title = document.getElementById('modalTitle');
+  let description = document.getElementById('modalDescription');
+  let mainImage = document.getElementById('main-image');
+
+  // data based on the selected residency
+  const residencies = {
+    1: {
+      title: "3 Bedroom House",
+      description: "The 3 Bedroom House offers a spacious living area, modern amenities, and easy access to nearby facilities.",
+      image: "assets/img/houses/Alina10.jpg"
+    },
+    2: {
+      title: "4 Bedroom House",
+      description: "The 4 Bedroom House is perfect for families, offering a large space and modern facilities.",
+      image: "assets/img/houses/Alina11.jpg"
+    },
+    3: {
+      title: "1 Bedroom House",
+      description: "A cozy 1 Bedroom House, ideal for singles or couples, with modern furnishings and close to city amenities.",
+      image: "assets/img/houses/Alina12.jpg"
+    },
+    4: {
+      title: "Studios",
+      description: "Affordable studio apartments, perfect for students or short-term stays, featuring modern design and amenities.",
+      image: "assets/img/houses/Alina7.jpg"
+    }
+    // Addition of other residencies just in case 
+  };
+
+  // Set modal content
+  title.innerText = residencies[id].title;
+  description.innerText = residencies[id].description;
+  mainImage.src = residencies[id].image;
+
+  // Display the modal
+  modal.style.display = "block";
+}
+
+function closeResidencyModal() {
+  let modal = document.getElementById('residencyModal');
+  modal.style.display = "none";
+}
+
+
+
+
+
+// Data for featured residencies
+const residencies = {
+  1: {
+    title: "3 Bedroom House",
+    description: "The 3 Bedroom House offers a spacious living area, modern amenities, and easy access to nearby facilities.",
+    images: [
+      "assets/img/houses/Alina1.jpg",
+      "assets/img/houses/Alina2.jpg",
+      "assets/img/houses/Alina3.jpg",
+      "assets/img/houses/Alina4.jpg",
+      "assets/img/houses/Alina5.jpg"
+    ]
+  },
+  2: {
+    title: "4 Bedroom House",
+    description: "The 4 Bedroom House is perfect for families, offering a large space and modern facilities.",
+    images: [
+      "assets/img/houses/Alina6.jpg",
+      "assets/img/houses/Alina7.jpg",
+      "assets/img/houses/Alina8.jpg",
+      "assets/img/houses/Alina9.jpg",
+      "assets/img/houses/Alina10.jpg"
+    ]
+  },
+  3: {
+    title: "1 Bedroom House",
+    description: "The 1 Bedroom House is cozy and perfect for individuals or couples, offering a modern and stylish living space.",
+    images: [
+      "assets/img/houses/Alina6.jpg",
+      "assets/img/houses/Alina7.jpg",
+      "assets/img/houses/sitting.jpg",
+      "assets/img/houses/Alina9.jpg",
+      "assets/img/houses/Alina10.jpg"
+    ]
+  },
+  4: {
+    title: "Studios",
+    description: "Our studios are compact yet efficient, ideal for those who value simplicity and accessibility.",
+    images: [
+      "assets/img/houses/Bedroom.jpg",
+      "assets/img/houses/sitting.jpg",
+      "assets/img/houses/cafe.jpg",
+      "assets/img/houses/Alina4.jpg",
+      "assets/img/houses/Alina5.jpg"
+    ]
+  }
+};
+
+// Function to open the modal with the appropriate residency details
+function showResidencyDetails(id) {
+  const residency = residencies[id];
+  const mainImage = document.getElementById('main-image');
+  const thumbnails = document.querySelector('.thumbnail-container');
+
+  // Set the main image to the first image in the residency's image list
+  mainImage.src = residency.images[0];
+  
+  // Clear existing thumbnails
+  thumbnails.innerHTML = '';
+
+  // Dynamically add the thumbnail images
+  residency.images.forEach((imgSrc, index) => {
+    const thumbnail = document.createElement('img');
+    thumbnail.src = imgSrc;
+    thumbnail.alt = `Thumbnail ${index + 1}`;
+    thumbnail.onclick = () => changeImage(imgSrc); // Attach click handler
+    thumbnails.appendChild(thumbnail);
+  });
+
+  // Set the modal title and description
+  document.getElementById('modalTitle').textContent = residency.title;
+  document.getElementById('modalDescription').textContent = residency.description;
+
+  // Show the modal
+  document.getElementById('residencyModal').style.display = 'block';
+}
+
+// Function to change the main image when a thumbnail is clicked
+function changeImage(imageSrc) {
+  document.getElementById('main-image').src = imageSrc;
+}
+
+// Functions to navigate between images
+let currentIndex = 0;
+
+// Function to open residency modal
+function showResidencyDetails(id) {
+  let modal = document.getElementById('residencyModal');
+  let title = document.getElementById('modalTitle');
+  let description = document.getElementById('modalDescription');
+  let mainImage = document.getElementById('main-image');
+  let thumbnailContainer = document.querySelector('.thumbnail-container');
+
+  // Set modal content
+  const residency = residencies[id];
+  title.innerText = residency.title;
+  description.innerText = residency.description;
+  mainImage.src = residency.images[currentIndex];
+
+  // Populate thumbnails
+  thumbnailContainer.innerHTML = '';
+  residency.images.forEach((imgSrc, index) => {
+    let imgElement = document.createElement('img');
+    imgElement.src = imgSrc;
+    imgElement.alt = `Thumbnail ${index + 1}`;
+    imgElement.onclick = () => changeImage(imgSrc, index);
+    thumbnailContainer.appendChild(imgElement);
+  });
+
+  // Display the modal
+  modal.style.display = 'block';
+}
+
+// Function to change the image
+function changeImage(imageSrc, index) {
+  document.getElementById('main-image').src = imageSrc;
+  currentIndex = index;
+}
+
+// Function to show next image
+function nextImage() {
+  currentIndex = (currentIndex + 1) % residencies[1].images.length;
+  document.getElementById('main-image').src = residencies[1].images[currentIndex];
+}
+
+// Function to show previous image
+function prevImage() {
+  currentIndex = (currentIndex - 1 + residencies[1].images.length) % residencies[1].images.length;
+  document.getElementById('main-image').src = residencies[1].images[currentIndex];
+}
+
+
+window.addEventListener("click", (event) => {
+  const modal = document.getElementById('residencyModal'); // Adjust for other modals if necessary
+  const modalContent = document.querySelector('.modal-content');
+
+  // Check if the click is outside the modal content but inside the modal
+  if (event.target === modal && !modalContent.contains(event.target)) {
+    modal.style.display = "none";
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const galleryElement = document.getElementById("main-image"); 
+
+
+  const hammer = new Hammer(galleryElement);
+
+
+  hammer.on("swipeleft", () => {
+    nextImage(); 
+  });
+
+  hammer.on("swiperight", () => {
+    prevImage(); 
+  });
+});
+
+
+
+
+
