@@ -1645,7 +1645,7 @@ input, textarea {
 
 .meteor-feature-description {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-color);
   line-height: 1.4;
 }
 
