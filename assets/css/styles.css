@@ -1909,12 +1909,13 @@ input, textarea {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
+  
 }
 
 .main-image-container {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 50%;
+  height: 60;
   text-align: center;
 }
 
@@ -1948,6 +1949,7 @@ input, textarea {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  background-color: var(--body-color);
 }
 
 .thumbnail-container img {
