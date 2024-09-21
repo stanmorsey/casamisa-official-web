@@ -1625,7 +1625,7 @@ input, textarea {
 .galaxy-feature-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--text-color-light);
+  color: hsl(228, 66%, 53%);;
 }
 
 .feature-image {
